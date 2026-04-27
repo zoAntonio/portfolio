@@ -1,36 +1,25 @@
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
+import Section from '../components/Section'
 
 const SKILLS = [
   'React', 'Node.js', 'Next.js', 'PostgreSQL',
   'TypeScript', 'Docker', 'Tailwind', 'Git',
 ]
 
+const fadeUp = (inView, delay = 0) => ({
+  initial:    { opacity: 0, y: 20 },
+  animate:    inView ? { opacity: 1, y: 0 } : {},
+  transition: { duration: 0.55, delay, ease: [0.16, 1, 0.3, 1] },
+})
+
 export default function About() {
-  const ref    = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
-
-  const fadeUp = (delay = 0) => ({
-    initial:    { opacity: 0, y: 20 },
-    animate:    inView ? { opacity: 1, y: 0 } : {},
-    transition: { duration: 0.55, delay, ease: [0.16, 1, 0.3, 1] },
-  })
-
   return (
-    <div ref={ref} className="min-h-screen flex flex-col justify-center py-20 px-6 border-t border-[#1a1a1a]">
-      <div className="max-w-6xl mx-auto">
-
-        <motion.p
-          {...fadeUp(0)}
-          className="font-mono text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#4ade80] mb-10"
-        >
-          // à propos
-        </motion.p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+    <Section label="à propos">
+      {(inView) => (
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
 
           {/* Left : bio */}
-          <motion.div {...fadeUp(0.1)}>
+          <motion.div {...fadeUp(inView, 0.1)}>
             <h2
               className="font-sans font-semibold text-white mb-5 leading-snug"
               style={{ fontSize: 'clamp(1.4rem, 4.5vw, 2.4rem)' }}
@@ -43,15 +32,14 @@ export default function About() {
               la construction d'applications web robustes, scalables et bien architecturées.
               Du design système au déploiement, je m'investis dans chaque couche de la stack.
             </p>
-            <p className="text-[#555] leading-relaxed text-[0.9rem]">
+            <p className="text-[#555] leading-relaxed text-sm sm:text-[0.95rem]">
               Curieux par nature, minutieux par discipline. J'aime le code qui tient à
               3h du matin autant qu'à la démo client.
             </p>
-
           </motion.div>
 
           {/* Right : skills */}
-          <motion.div {...fadeUp(0.18)}>
+          <motion.div {...fadeUp(inView, 0.18)}>
             <p className="font-mono text-[10px] tracking-[0.25em] text-[#3a3a3a] uppercase mb-5">
               // stack technique
             </p>
@@ -71,7 +59,7 @@ export default function About() {
           </motion.div>
 
         </div>
-      </div>
-    </div>
+      )}
+    </Section>
   )
 }

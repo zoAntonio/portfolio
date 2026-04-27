@@ -26,7 +26,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 md:hidden ${
         scrolled
           ? 'bg-[#0a0a0a]/92 backdrop-blur-md border-b border-[#1e1e1e]'
           : 'bg-transparent'
