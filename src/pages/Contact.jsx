@@ -1,21 +1,22 @@
 import { motion } from 'framer-motion'
 import Section from '../components/Section'
+import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
 
-const LINKS = [
+const CONTACTS = [
   {
-    label:   'email',
-    display: 'zoheriniaina.antonio@gmail.com',
-    href:    'mailto:zoheriniaina.antonio@gmail.com',
+    label: 'Email',
+    Icon:  FiMail,
+    href:  'mailto:zoheriniaina.antonio@gmail.com',
   },
   {
-    label:   'github',
-    display: 'github.com/Antonio2772',
-    href:    'https://github.com/Antonio2772',
+    label: 'GitHub',
+    Icon:  FiGithub,
+    href:  'https://github.com/Antonio2772',
   },
   {
-    label:   'linkedin',
-    display: 'linkedin.com/in/zo-antonio',
-    href:    'https://linkedin.com/in/zo-antonio',
+    label: 'LinkedIn',
+    Icon:  FiLinkedin,
+    href:  'https://linkedin.com/in/zo-antonio',
   },
 ]
 
@@ -23,41 +24,61 @@ export default function Contact() {
   return (
     <Section label="contact">
       {(inView) => (
-        <>
+        <div className="flex flex-col items-center text-center max-w-2xl w-full">
+
           <motion.h2
             initial={{ opacity: 0, y: 22 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.65, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans font-bold text-white leading-tight tracking-tighter mb-12 text-center"
-            style={{ fontSize: 'clamp(1.5rem, 5vw, 2.8rem)' }}
+            className="font-sans font-bold text-white leading-tight tracking-tighter mb-5"
+            style={{ fontSize: 'clamp(2rem, 5.5vw, 3.4rem)' }}
           >
-            Travaillons{' '}
-            <span className="text-[#4ade80]">ensemble.</span>
+            Get in <span className="text-[#4ade80]">touch.</span>
           </motion.h2>
 
-          <div className="flex flex-col max-w-xl w-full gap-px bg-[#141414]">
-            {LINKS.map((link, i) => (
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="font-sans text-[#555] text-sm leading-relaxed mb-12 max-w-sm"
+          >
+            Un projet, une opportunité ou simplement envie d'échanger ?
+            Je suis disponible via les canaux ci-dessous.
+          </motion.p>
+
+          <div className="flex items-center gap-5 mb-12">
+            {CONTACTS.map(({ label, Icon, href }, i) => (
               <motion.a
-                key={link.label}
-                href={link.href}
-                target={link.label !== 'email' ? '_blank' : undefined}
+                key={label}
+                href={href}
+                target={label !== 'Email' ? '_blank' : undefined}
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, x: -14 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.22 + i * 0.09 }}
-                className="group flex flex-col sm:flex-row sm:items-center sm:justify-between bg-[#0a0a0a] px-5 py-4 sm:py-3.5 hover:bg-[#0d0d0d] transition-colors duration-200"
+                initial={{ opacity: 0, y: 16 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
+                title={label}
+                className="w-14 h-14 rounded-full bg-[#0f0f0f] border border-[#1e1e1e] flex items-center justify-center text-[#555] hover:text-[#4ade80] hover:border-[#4ade80]/40 hover:bg-[#0d0d0d] transition-all duration-200"
               >
-                <span className="font-mono text-[10px] tracking-[0.2em] text-[#2a2a2a] uppercase mb-1 sm:mb-0">
-                  {link.label}
-                </span>
-                <span className="font-mono text-[11px] text-[#3a3a3a] group-hover:text-[#4ade80] transition-colors duration-200 flex items-center gap-1.5 break-all sm:break-normal">
-                  {link.display}
-                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">↗</span>
-                </span>
+                <Icon size={20} />
               </motion.a>
             ))}
           </div>
-        </>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.55 }}
+            className="flex flex-col gap-1.5"
+          >
+            <span className="font-mono text-[11px] text-[#333]">
+              zoheriniaina.antonio@gmail.com
+            </span>
+            <span className="font-mono text-[11px] text-[#2a2a2a]">
+              Madagascar
+            </span>
+          </motion.div>
+
+        </div>
       )}
     </Section>
   )
