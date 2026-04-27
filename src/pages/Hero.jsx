@@ -44,7 +44,7 @@ export default function Hero() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center dot-grid overflow-hidden">
+    <div className="relative min-h-screen flex flex-col justify-center pb-16 dot-grid overflow-hidden">
       {/* Radial dark vignette over the grid */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -60,13 +60,13 @@ export default function Hero() {
         style={{ background: 'rgba(74,222,128,0.04)' }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pt-24 pb-32">
+      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pt-16">
         {/* Label */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="font-mono text-[11px] tracking-[0.35em] uppercase text-[#4ade80] mb-8"
+          className="font-mono text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#4ade80] mb-5"
         >
           // full-stack developer
         </motion.p>
@@ -76,8 +76,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="font-sans font-bold leading-none tracking-tighter text-white mb-10"
-          style={{ fontSize: 'clamp(5.5rem, 16vw, 13rem)' }}
+          className="font-sans font-bold leading-none tracking-tighter text-white mb-6"
+          style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}
         >
           Zo<span className="text-[#4ade80]">.</span>
         </motion.h1>
@@ -87,7 +87,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 1 }}
-          className="font-mono text-sm text-[#666] mb-14 h-6 flex items-center gap-2"
+          className="font-mono text-[11px] sm:text-sm text-[#666] mb-8 min-h-6 flex items-center gap-2 flex-wrap"
         >
           <span className="text-[#4ade80] select-none">~$</span>
           <span className="text-[#aaa]">{typed}</span>
@@ -99,7 +99,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.15 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-wrap items-center gap-4"
         >
           <button
             onClick={() => scrollTo('projects')}

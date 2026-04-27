@@ -44,11 +44,11 @@ function ProjectCard({ project, delay, inView }) {
         className="pointer-events-none absolute top-0 right-0 w-8 h-8 border-t border-r border-[#4ade80]/0 group-hover:border-[#4ade80]/50 transition-colors duration-300"
       />
 
-      <div className="font-mono text-5xl font-bold text-[#161616] group-hover:text-[#4ade80]/10 transition-colors duration-300 mb-6 select-none leading-none">
+      <div className="font-mono font-bold text-[#161616] group-hover:text-[#4ade80]/10 transition-colors duration-300 mb-6 select-none leading-none" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
         {project.num}
       </div>
 
-      <h3 className="font-sans text-xl font-semibold text-white group-hover:text-[#4ade80] transition-colors duration-300 mb-3">
+      <h3 className="font-sans font-semibold text-white group-hover:text-[#4ade80] transition-colors duration-300 mb-3" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}>
         {project.name}
       </h3>
 
@@ -94,14 +94,14 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <div ref={ref} className="py-32 px-6 border-t border-[#1a1a1a]">
+    <div ref={ref} className="min-h-screen flex flex-col justify-center py-20 px-6 border-t border-[#1a1a1a]">
       <div className="max-w-6xl mx-auto">
 
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="font-mono text-[11px] tracking-[0.35em] uppercase text-[#4ade80] mb-14"
+          className="font-mono text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#4ade80] mb-10"
         >
           // projets
         </motion.p>
