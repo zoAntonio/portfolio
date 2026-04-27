@@ -7,6 +7,7 @@ import Hero               from './pages/Hero'
 import About              from './pages/About'
 import Projects           from './pages/Projects'
 import Contact            from './pages/Contact'
+import Stack              from './pages/Stack'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <main className="relative pb-16 md:pb-0 md:pl-16" style={{ zIndex: 1 }}>
           <section id="hero">     <Hero />     </section>
           <section id="about">    <About />    </section>
+          <section id="stack">    <Stack />    </section>
           <section id="projects"> <Projects /> </section>
           <section id="contact">  <Contact />  </section>
         </main>

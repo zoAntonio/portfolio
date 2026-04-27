@@ -22,6 +22,17 @@ const SECTIONS = [
     ),
   },
   {
+    id: 'stack',
+    label: 'Stack',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="11" width="14" height="4" rx="1" />
+        <rect x="2" y="6.5" width="14" height="4" rx="1" />
+        <rect x="2" y="2" width="14" height="4" rx="1" />
+      </svg>
+    ),
+  },
+  {
     id: 'projects',
     label: 'Projets',
     icon: (

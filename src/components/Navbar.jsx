@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 const NAV_LINKS = [
-  { label: 'à propos', id: 'about' },
+  { label: 'à propos', id: 'about'    },
+  { label: 'stack',    id: 'stack'    },
   { label: 'projets',  id: 'projects' },
-  { label: 'contact',  id: 'contact' },
+  { label: 'contact',  id: 'contact'  },
 ]
 
 function scrollTo(id) {
