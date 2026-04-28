@@ -44,7 +44,7 @@ export default function Hero() {
       noBorder
       padding="pb-16 px-6"
       className="overflow-hidden"
-      innerClassName="pt-16 md:pt-0 text-center"
+      innerClassName="text-center"
     >
       {/* Ambient green glow */}
       <div
@@ -59,7 +59,7 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="font-mono text-sm sm:text-base tracking-[0.35em] uppercase text-[#4ade80] mb-5"
       >
-        // full-stack developer
+        // {t.hero.label}
       </motion.p>
 
       {/* Main name */}
@@ -70,7 +70,7 @@ export default function Hero() {
         className="font-sans font-bold leading-none tracking-tighter text-white mb-6"
         style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}
       >
-        Zo<span className="text-[#4ade80]">.</span>
+        Zo<span className="text-[#4ade80]"> . Antonio </span>
       </motion.h1>
 
       {/* Typing terminal line */}
@@ -104,6 +104,13 @@ export default function Hero() {
         >
           {t.hero.cta2}
         </button>
+        <a
+          href="/Zo-CV.pdf"
+          download
+          className="px-7 py-3 border border-[#222] text-[#444] font-mono text-xs tracking-[0.15em] uppercase hover:border-[#4ade80] hover:text-[#4ade80] transition-all duration-200 focus:outline-none"
+        >
+          {t.hero.cta3}
+        </a>
       </motion.div>
 
       {/* Social badges */}
@@ -114,7 +121,7 @@ export default function Hero() {
         className="absolute bottom-24 md:bottom-10 right-6 md:right-10 flex items-center gap-2.5"
       >
         <span className="font-mono text-[8px] tracking-[0.3em] text-[#3a3a3a] uppercase mr-1 hidden sm:block">
-          connect
+          {t.hero.connect}
         </span>
         {SOCIALS.map(({ href, label, Icon }) => (
           <a
@@ -137,7 +144,7 @@ export default function Hero() {
         transition={{ delay: 2.2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3"
       >
-        <span className="font-mono text-[9px] tracking-[0.4em] text-[#2a2a2a] uppercase">scroll</span>
+        <span className="font-mono text-[9px] tracking-[0.4em] text-[#2a2a2a] uppercase">{t.hero.scroll}</span>
         <div className="scroll-float w-px h-10 bg-gradient-to-b from-[#4ade80]/40 to-transparent" />
       </motion.div>
     </Section>

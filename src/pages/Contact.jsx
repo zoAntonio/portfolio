@@ -5,8 +5,8 @@ import { useT } from '../i18n'
 
 export default function Contact() {
   const { t } = useT()
-  return (
-    <Section label={t.sections.contact}>
+  return ( 
+    <Section>
     {(inView) => (
         <div className="flex flex-col items-center text-center max-w-2xl w-full gap-10">
 
@@ -17,7 +17,7 @@ export default function Contact() {
             className="font-sans font-bold text-white leading-tight tracking-tighter"
             style={{ fontSize: 'clamp(2.4rem, 7vw, 4.5rem)' }}
           >
-            Get in <span className="text-[#4ade80]">touch.</span>
+            {t.contact.title} <span className="text-[#4ade80]">{t.contact.title_hl}</span>
           </motion.h2>
 
           <motion.p

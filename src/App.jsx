@@ -1,6 +1,5 @@
 import { BrowserRouter } from 'react-router-dom'
 import { LanguageProvider } from './i18n'
-import Navbar             from './components/Navbar'
 import Sidebar            from './components/Sidebar'
 import ParticleBackground from './components/ParticleBackground'
 import Footer             from './components/Footer'
@@ -16,7 +15,6 @@ export default function App() {
     <BrowserRouter>
       <div className="bg-[#0a0a0a] min-h-screen">
         <ParticleBackground />
-        <Navbar />
         <Sidebar />
         <main className="relative pb-16 md:pb-0 md:pl-16" style={{ zIndex: 1 }}>
           <section id="hero">     <Hero />     </section>

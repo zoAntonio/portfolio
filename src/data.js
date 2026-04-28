@@ -6,28 +6,30 @@ import {
   SiSpring,
 } from 'react-icons/si'
 import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 
 export const PHRASES = {
   fr: [
-    'je construis des apps qui tiennent la route.',
-    'du backend au frontend, sans compromis.',
-    'code propre. architecture solide. résultats nets.',
+    'full-stack · Madagascar.',
+    'craft, vitesse, interfaces soignées.',
+    'fonctionnel et beau — toujours les deux.',
   ],
   en: [
-    'I build apps that hold up under pressure.',
-    'from backend to frontend, no compromises.',
-    'clean code. solid architecture. sharp results.',
+    'full-stack · Madagascar.',
+    'craft, speed, interfaces that feel right.',
+    'functional and beautiful — always both.',
   ],
 }
 
 // ─── Shared social links (Hero + Contact) ────────────────────────────────────
 
 export const SOCIALS = [
-  { label: 'Email',    Icon: FiMail,     href: 'mailto:zoheriniaina.antonio@gmail.com' },
-  { label: 'GitHub',   Icon: FiGithub,   href: 'https://github.com/ogsan-zo' },
-  { label: 'LinkedIn', Icon: FiLinkedin, href: 'https://linkedin.com/in/zo-antonio' },
+  { label: 'Email',     Icon: FiMail,      href: 'mailto:zoheriniaina.antonio@gmail.com' },
+  { label: 'GitHub',    Icon: FiGithub,    href: 'https://github.com/ogsan-zo' },
+  { label: 'LinkedIn',  Icon: FiLinkedin,  href: 'https://linkedin.com/in/zo-antonio' },
+  { label: 'WhatsApp',  Icon: FaWhatsapp,  href: 'https://wa.me/261346014447' },
 ]
 
 // ─── About ───────────────────────────────────────────────────────────────────

@@ -15,7 +15,7 @@ function TechTag({ name }) {
   )
 }
 
-function ProjectCard({ project, inView, delay, isLeft, lang }) {
+function ProjectCard({ project, inView, delay, isLeft, lang, t }) {
   return (
     <motion.article
       initial={{ opacity: 0, x: isLeft ? -28 : 28 }}
@@ -64,7 +64,7 @@ function ProjectCard({ project, inView, delay, isLeft, lang }) {
             rel="noopener noreferrer"
             className="font-mono text-[11px] text-[#666] hover:text-[#4ade80] transition-colors duration-200 flex items-center gap-1.5"
           >
-            <span>↗</span> Live
+            <span>↗</span> {t.projects.live}
           </a>
         )}
       </div>
@@ -74,6 +74,7 @@ function ProjectCard({ project, inView, delay, isLeft, lang }) {
 
 export default function Projects() {
   const { lang, t } = useT()
+
   return (
     <Section label={t.sections.projects} autoHeight>
       {(inView) => (
@@ -105,6 +106,7 @@ export default function Projects() {
                       delay={0.25 + i * 0.2}
                       isLeft={isLeft}
                       lang={lang}
+                      t={t}
                     />
                   </div>
 

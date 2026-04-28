@@ -27,7 +27,7 @@ function TechCard({ tech, delay, inView }) {
 export default function Stack() {
   const [active, setActive] = useState('frontend')
   const { t } = useT()
-  const activeLabel = CATEGORIES.find(c => c.id === active)?.label ?? active
+  const activeLabel = t.stack.categories[active] ?? active
 
   return (
     <Section label={t.sections.stack}>
@@ -53,7 +53,7 @@ export default function Stack() {
                       : 'border border-[#1e1e1e] text-[#555] hover:border-[#4ade80]/40 hover:text-[#4ade80]',
                   ].join(' ')}
                 >
-                  {cat.label}
+                  {t.stack.categories[cat.id] ?? cat.label}
                 </motion.button>
               ))}
             </div>
