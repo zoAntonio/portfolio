@@ -1,45 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Section from '../components/Section'
-import {
-  SiNextdotjs, SiVuedotjs, SiReact, SiJavascript, SiTailwindcss,
-  SiPhp, SiSymfony, SiLaravel, SiSpringboot,
-  SiPostgresql, SiMysql,
-  SiDocker, SiGit, SiGithub, SiPostman,
-} from 'react-icons/si'
-
-const CATEGORIES = [
-  { id: 'frontend',  label: 'Frontend'  },
-  { id: 'backend',   label: 'Backend'   },
-  { id: 'databases', label: 'Databases' },
-  { id: 'tools',     label: 'Tools'     },
-]
-
-const STACKS = {
-  frontend: [
-    { name: 'Next.js',      Icon: SiNextdotjs,   color: '#ffffff' },
-    { name: 'Vue.js',       Icon: SiVuedotjs,    color: '#42B883' },
-    { name: 'React',        Icon: SiReact,       color: '#61DAFB' },
-    { name: 'JavaScript',   Icon: SiJavascript,  color: '#F7DF1E' },
-    { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#06B6D4' },
-  ],
-  backend: [
-    { name: 'PHP',         Icon: SiPhp,        color: '#777BB4' },
-    { name: 'Symfony',     Icon: SiSymfony,    color: '#ffffff' },
-    { name: 'Laravel',     Icon: SiLaravel,    color: '#FF2D20' },
-    { name: 'Spring Boot', Icon: SiSpringboot, color: '#6DB33F' },
-  ],
-  databases: [
-    { name: 'PostgreSQL', Icon: SiPostgresql, color: '#4169E1' },
-    { name: 'MySQL',      Icon: SiMysql,      color: '#4479A1' },
-  ],
-  tools: [
-    { name: 'Docker',  Icon: SiDocker,  color: '#2496ED' },
-    { name: 'Git',     Icon: SiGit,     color: '#F05032' },
-    { name: 'GitHub',  Icon: SiGithub,  color: '#ffffff'  },
-    { name: 'Postman', Icon: SiPostman, color: '#FF6C37' },
-  ],
-}
+import { CATEGORIES, STACKS } from '../data'
 
 function TechCard({ tech, delay, inView }) {
   return (

@@ -1,24 +1,6 @@
 import { motion } from 'framer-motion'
 import Section from '../components/Section'
-import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
-
-const CONTACTS = [
-  {
-    label: 'Email',
-    Icon:  FiMail,
-    href:  'mailto:zoheriniaina.antonio@gmail.com',
-  },
-  {
-    label: 'GitHub',
-    Icon:  FiGithub,
-    href:  'https://github.com/ogsan-zo',
-  },
-  {
-    label: 'LinkedIn',
-    Icon:  FiLinkedin,
-    href:  'https://linkedin.com/in/zo-antonio',
-  },
-]
+import { SOCIALS } from '../data'
 
 export default function Contact() {
   return (
@@ -47,7 +29,7 @@ export default function Contact() {
           </motion.p>
 
           <div className="flex items-center gap-5 mb-12">
-            {CONTACTS.map(({ label, Icon, href }, i) => (
+            {SOCIALS.map(({ label, Icon, href }, i) => (
               <motion.a
                 key={label}
                 href={href}
@@ -74,7 +56,7 @@ export default function Contact() {
               zoheriniaina.antonio@gmail.com
             </span>
             <span className="font-mono text-[11px] text-[#555]">
-              Madagascar
+              Antananarivo, Madagascar
             </span>
           </motion.div>
 

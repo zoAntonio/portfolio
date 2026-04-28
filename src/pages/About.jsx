@@ -1,13 +1,7 @@
 import { motion } from 'framer-motion'
 import Section from '../components/Section'
 import heroImg from '../assets/hero.png'
-
-const META = [
-  { label: 'Localisation', value: 'Antananarivo' },
-  { label: 'Statut',       value: 'Full-Stack Developer' },
-  { label: 'Langues',      value: 'FR · EN · MG' },
-  { label: 'Disponible',   value: 'Open to work' },
-]
+import { META } from '../data'
 
 export default function About() {
   return (
