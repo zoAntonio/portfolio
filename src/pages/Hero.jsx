@@ -91,7 +91,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="font-mono text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#4ade80] mb-5"
+        className="font-mono text-sm sm:text-base tracking-[0.35em] uppercase text-[#4ade80] mb-5"
       >
         // full-stack developer
       </motion.p>
@@ -147,7 +147,7 @@ export default function Hero() {
         transition={{ delay: 1.8 }}
         className="absolute bottom-24 md:bottom-10 right-6 md:right-10 flex items-center gap-2.5"
       >
-        <span className="font-mono text-[8px] tracking-[0.3em] text-[#2a2a2a] uppercase mr-1 hidden sm:block">
+        <span className="font-mono text-[8px] tracking-[0.3em] text-[#3a3a3a] uppercase mr-1 hidden sm:block">
           connect
         </span>
         {SOCIALS.map(({ href, label, icon }) => (
@@ -157,7 +157,7 @@ export default function Hero() {
             target={href.startsWith('mailto') ? '_self' : '_blank'}
             rel="noopener noreferrer"
             aria-label={label}
-            className="w-9 h-9 rounded-full border border-[#1e1e1e] text-[#444] flex items-center justify-center hover:border-[#4ade80] hover:text-[#4ade80] transition-all duration-200"
+            className="w-9 h-9 rounded-full border border-[#2e2e2e] bg-[#0f0f0f] text-[#888] flex items-center justify-center hover:border-[#4ade80] hover:text-[#4ade80] hover:bg-[#0d0d0d] transition-all duration-200"
           >
             {icon}
           </a>

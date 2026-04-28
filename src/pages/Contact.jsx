@@ -40,7 +40,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 14 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans text-[#555] text-sm leading-relaxed mb-12 max-w-sm"
+            className="font-sans text-[#888] text-sm leading-relaxed mb-12 max-w-sm"
           >
             Un projet, une opportunité ou simplement envie d'échanger ?
             Je suis disponible via les canaux ci-dessous.
@@ -57,7 +57,7 @@ export default function Contact() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
                 title={label}
-                className="w-14 h-14 rounded-full bg-[#0f0f0f] border border-[#1e1e1e] flex items-center justify-center text-[#555] hover:text-[#4ade80] hover:border-[#4ade80]/40 hover:bg-[#0d0d0d] transition-all duration-200"
+                className="w-14 h-14 rounded-full bg-[#0f0f0f] border border-[#2a2a2a] flex items-center justify-center text-[#888] hover:text-[#4ade80] hover:border-[#4ade80]/40 hover:bg-[#0d0d0d] transition-all duration-200"
               >
                 <Icon size={20} />
               </motion.a>
@@ -70,10 +70,10 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.55 }}
             className="flex flex-col gap-1.5"
           >
-            <span className="font-mono text-[11px] text-[#333]">
+            <span className="font-mono text-[11px] text-[#666]">
               zoheriniaina.antonio@gmail.com
             </span>
-            <span className="font-mono text-[11px] text-[#2a2a2a]">
+            <span className="font-mono text-[11px] text-[#555]">
               Madagascar
             </span>
           </motion.div>

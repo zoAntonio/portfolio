@@ -7,7 +7,7 @@ export default function Section({
   noBorder       = false,
   className      = '',
   innerClassName = '',
-  padding        = 'py-20 px-6',
+  padding        = 'py-14 md:py-20 px-4 sm:px-6',
 }) {
   const ref    = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -28,7 +28,7 @@ export default function Section({
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="font-mono text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#4ade80] mb-10 w-full text-center"
+            className="font-mono text-sm sm:text-base tracking-[0.35em] uppercase text-[#4ade80] mb-10 w-full text-center"
           >
             // {label}
           </motion.p>

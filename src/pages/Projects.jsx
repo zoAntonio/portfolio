@@ -64,7 +64,7 @@ const PROJECTS = [
 function TechTag({ name }) {
   const tech = TECH_ICONS[name]
   return (
-    <span className="group/tag flex items-center gap-1.5 font-mono text-[10px] text-[#3a3a3a] border border-[#1a1a1a] rounded-full px-3 py-1 hover:border-[#252525] hover:text-[#555] transition-colors duration-200">
+    <span className="group/tag flex items-center gap-1.5 font-mono text-[10px] text-[#777] border border-[#2a2a2a] rounded-full px-3 py-1 hover:border-[#4ade80]/30 hover:text-[#aaa] transition-colors duration-200">
       {tech && (
         <tech.Icon size={11} style={{ color: tech.color }} className="opacity-70 group-hover/tag:opacity-100 transition-opacity duration-200" />
       )}
@@ -88,14 +88,14 @@ function ProjectCard({ project, inView, delay, isLeft }) {
         </h3>
         <span className="font-mono text-[#4ade80] text-xs">· {project.type}</span>
       </div>
-      <p className="font-mono text-[9px] tracking-[0.2em] text-[#2a2a2a] uppercase mb-4">
+      <p className="font-mono text-[9px] tracking-[0.2em] text-[#555] uppercase mb-4">
         {project.period}
       </p>
 
       {/* Description bullets */}
       <ul className="flex flex-col gap-2 mb-5">
         {project.description.map((line, i) => (
-          <li key={i} className="flex gap-2.5 text-sm text-[#555] leading-relaxed">
+          <li key={i} className="flex gap-2.5 text-sm text-[#999] leading-relaxed">
             <span className="text-[#4ade80] shrink-0 mt-0.5 select-none">·</span>
             {line}
           </li>
@@ -115,7 +115,7 @@ function ProjectCard({ project, inView, delay, isLeft }) {
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-[11px] text-[#333] hover:text-[#4ade80] transition-colors duration-200 flex items-center gap-1.5"
+          className="font-mono text-[11px] text-[#666] hover:text-[#4ade80] transition-colors duration-200 flex items-center gap-1.5"
         >
           <span>→</span> GitHub
         </a>
@@ -124,7 +124,7 @@ function ProjectCard({ project, inView, delay, isLeft }) {
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[11px] text-[#333] hover:text-[#4ade80] transition-colors duration-200 flex items-center gap-1.5"
+            className="font-mono text-[11px] text-[#666] hover:text-[#4ade80] transition-colors duration-200 flex items-center gap-1.5"
           >
             <span>↗</span> Live
           </a>
