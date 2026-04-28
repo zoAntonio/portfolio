@@ -3,7 +3,7 @@ import Section from '../components/Section'
 import heroImg from '../assets/hero.png'
 
 const META = [
-  { label: 'Localisation', value: 'Madagascar' },
+  { label: 'Localisation', value: 'Antananarivo' },
   { label: 'Statut',       value: 'Full-Stack Developer' },
   { label: 'Langues',      value: 'FR · EN · MG' },
   { label: 'Disponible',   value: 'Open to work' },
@@ -45,20 +45,20 @@ export default function About() {
               className="font-sans font-semibold text-white leading-snug"
               style={{ fontSize: 'clamp(1.4rem, 4.5vw, 2.4rem)' }}
             >
-              Développeur passionné par les interfaces{' '}
-              <span className="text-[#4ade80]">qui durent.</span>
+              Développeur animé par une volonté constante{' '}
+              <span className="text-[#4ade80]">de progresser.</span>
             </h2>
 
             {/* Bio */}
             <div className="flex flex-col gap-3">
               <p className="text-[#999] leading-relaxed text-sm sm:text-[0.95rem]">
-                Je suis Zo — développeur full-stack basé à Madagascar, spécialisé dans
-                la construction d'applications web robustes, scalables et bien architecturées.
-                Du design système au déploiement, je m'investis dans chaque couche de la stack.
+                Diplômé d'une Licence en Informatique à IT University, j'ai acquis une
+                expérience concrète en développement Full-Stack lors de stages au sein
+                d'institutions publiques — ESPA et MESUPRES — avec Symfony, Next.js et PostgreSQL.
               </p>
               <p className="text-[#999] leading-relaxed text-sm sm:text-[0.95rem]">
-                Curieux par nature, minutieux par discipline. J'aime le code qui tient à
-                3h du matin autant qu'à la démo client.
+                Humble, curieux et rigoureux, je recherche un environnement ambitieux
+                où contribuer à des projets à fort impact et évoluer dans ma carrière.
               </p>
             </div>
 

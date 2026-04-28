@@ -20,7 +20,7 @@ const SOCIALS = [
     ),
   },
   {
-    href: 'https://github.com/Antonio2772',
+    href: 'https://github.com/ogsan-zo',
     label: 'GitHub',
     icon: (
       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">

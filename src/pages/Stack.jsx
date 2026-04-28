@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Section from '../components/Section'
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiVite,
-  SiNodedotjs, SiExpress, SiNestjs, SiPython,
-  SiPostgresql, SiMongodb, SiRedis, SiMysql,
-  SiDocker, SiGit, SiGithub, SiLinux, SiPostman, SiFigma,
+  SiNextdotjs, SiVuedotjs, SiReact, SiJavascript, SiTailwindcss,
+  SiPhp, SiSymfony, SiLaravel, SiSpringboot,
+  SiPostgresql, SiMysql,
+  SiDocker, SiGit, SiGithub, SiPostman,
 } from 'react-icons/si'
 
 const CATEGORIES = [
@@ -17,31 +17,27 @@ const CATEGORIES = [
 
 const STACKS = {
   frontend: [
-    { name: 'React',        Icon: SiReact,           color: '#61DAFB' },
-    { name: 'Next.js',      Icon: SiNextdotjs,       color: '#ffffff' },
-    { name: 'TypeScript',   Icon: SiTypescript,      color: '#3178C6' },
-    { name: 'Tailwind CSS', Icon: SiTailwindcss,     color: '#06B6D4' },
-    { name: 'Vite',         Icon: SiVite,            color: '#646CFF' },
+    { name: 'Next.js',      Icon: SiNextdotjs,   color: '#ffffff' },
+    { name: 'Vue.js',       Icon: SiVuedotjs,    color: '#42B883' },
+    { name: 'React',        Icon: SiReact,       color: '#61DAFB' },
+    { name: 'JavaScript',   Icon: SiJavascript,  color: '#F7DF1E' },
+    { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#06B6D4' },
   ],
   backend: [
-    { name: 'Node.js',  Icon: SiNodedotjs, color: '#339933' },
-    { name: 'Express',  Icon: SiExpress,   color: '#ffffff'  },
-    { name: 'NestJS',   Icon: SiNestjs,    color: '#E0234E' },
-    { name: 'Python',   Icon: SiPython,    color: '#3776AB' },
+    { name: 'PHP',         Icon: SiPhp,        color: '#777BB4' },
+    { name: 'Symfony',     Icon: SiSymfony,    color: '#ffffff' },
+    { name: 'Laravel',     Icon: SiLaravel,    color: '#FF2D20' },
+    { name: 'Spring Boot', Icon: SiSpringboot, color: '#6DB33F' },
   ],
   databases: [
     { name: 'PostgreSQL', Icon: SiPostgresql, color: '#4169E1' },
-    { name: 'MongoDB',    Icon: SiMongodb,    color: '#47A248' },
-    { name: 'Redis',      Icon: SiRedis,      color: '#DC382D' },
     { name: 'MySQL',      Icon: SiMysql,      color: '#4479A1' },
   ],
   tools: [
-    { name: 'Docker',   Icon: SiDocker,           color: '#2496ED' },
-    { name: 'Git',      Icon: SiGit,              color: '#F05032' },
-    { name: 'GitHub',   Icon: SiGithub,           color: '#ffffff'  },
-    { name: 'Linux',    Icon: SiLinux,            color: '#FCC624' },
-    { name: 'Postman',  Icon: SiPostman,          color: '#FF6C37' },
-    { name: 'Figma',    Icon: SiFigma,            color: '#F24E1E' },
+    { name: 'Docker',  Icon: SiDocker,  color: '#2496ED' },
+    { name: 'Git',     Icon: SiGit,     color: '#F05032' },
+    { name: 'GitHub',  Icon: SiGithub,  color: '#ffffff'  },
+    { name: 'Postman', Icon: SiPostman, color: '#FF6C37' },
   ],
 }
 

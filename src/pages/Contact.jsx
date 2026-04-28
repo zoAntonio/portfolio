@@ -11,7 +11,7 @@ const CONTACTS = [
   {
     label: 'GitHub',
     Icon:  FiGithub,
-    href:  'https://github.com/Antonio2772',
+    href:  'https://github.com/ogsan-zo',
   },
   {
     label: 'LinkedIn',

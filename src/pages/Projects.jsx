@@ -1,62 +1,54 @@
 import { motion } from 'framer-motion'
 import Section from '../components/Section'
 import {
-  SiReact, SiNextdotjs, SiNodedotjs, SiTypescript,
-  SiPostgresql, SiRedis, SiMongodb, SiExpress,
-  SiSocketdotio, SiDocker,
+  SiNextdotjs, SiPostgresql, SiSymfony, SiSpring,
 } from 'react-icons/si'
 
 const TECH_ICONS = {
-  'Next.js':    { Icon: SiNextdotjs,   color: '#ffffff' },
-  'Node.js':    { Icon: SiNodedotjs,   color: '#339933' },
-  'PostgreSQL': { Icon: SiPostgresql,  color: '#4169E1' },
-  'Redis':      { Icon: SiRedis,       color: '#DC382D' },
-  'React':      { Icon: SiReact,       color: '#61DAFB' },
-  'Socket.io':  { Icon: SiSocketdotio, color: '#ffffff' },
-  'Express':    { Icon: SiExpress,     color: '#ffffff' },
-  'MongoDB':    { Icon: SiMongodb,     color: '#47A248' },
-  'TypeScript': { Icon: SiTypescript,  color: '#3178C6' },
-  'Docker':     { Icon: SiDocker,      color: '#2496ED' },
+  'Next.js':    { Icon: SiNextdotjs,  color: '#ffffff' },
+  'PostgreSQL': { Icon: SiPostgresql, color: '#4169E1' },
+  'Symfony':    { Icon: SiSymfony,    color: '#ffffff' },
+  'Spring':     { Icon: SiSpring,     color: '#6DB33F' },
 }
 
 const PROJECTS = [
   {
     num: '01',
-    name: 'DevBoard',
-    type: 'Dashboard',
-    period: '2024',
+    name: 'Inscriptions ESPA',
+    type: 'Stage',
+    period: 'Déc 2025 → Mars 2026',
     description: [
-      'Dashboard temps réel pour développeurs — métriques de déploiement, logs et alertes.',
-      'Architecture microservices avec WebSockets pour les mises à jour en direct.',
+      'Système d\'information complet pour la gestion des inscriptions étudiantes — back-end Symfony, front-end Next.js.',
+      'Automatisation de la génération de documents officiels (attestations, relevés de notes), réduisant à zéro les saisies manuelles.',
     ],
-    stack: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis'],
-    github: 'https://github.com/Antonio2772',
+    stack: ['Symfony', 'Next.js', 'PostgreSQL'],
+    github: 'https://github.com/ogsan-zo',
     live: '#',
   },
   {
     num: '02',
-    name: 'NexChat',
-    type: 'Messagerie',
-    period: '2024',
+    name: 'Rapports MESUPRES',
+    type: 'Institutionnel',
+    period: 'Oct → Déc 2025',
     description: [
-      'Application de messagerie temps réel : rooms, DMs et partage de fichiers.',
-      'Chiffrement end-to-end côté client pour la sécurité des échanges.',
+      'Plateforme centralisée remplaçant les échanges manuels de rapports au niveau du Ministère de l\'Enseignement Supérieur.',
+      'Centralisation de 3 types de rapports (hebdomadaires, mensuels, semestriels) avec tableau de bord de suivi par agent.',
     ],
-    stack: ['React', 'Socket.io', 'Express', 'MongoDB'],
-    github: 'https://github.com/Antonio2772',
+    stack: ['Symfony', 'Next.js', 'PostgreSQL'],
+    github: 'https://github.com/ogsan-zo',
     live: '#',
   },
   {
     num: '03',
-    name: 'ApiForge',
+    name: 'Mini-Framework MVC',
     type: 'Dev Tool',
-    period: '2024',
+    period: '2024 – 2025',
     description: [
-      'Générateur et documenteur d\'APIs REST depuis une interface visuelle.',
-      'Crée des endpoints, schémas et docs Swagger automatiquement.',
+      'Framework MVC from scratch en Java, inspiré de Spring MVC — routeur dynamique avec mapping automatique des URLs.',
+      'Système de sécurité d\'accès basé sur des rôles et permissions, avec documentation complète de l\'architecture.',
     ],
-    stack: ['TypeScript', 'Next.js', 'PostgreSQL', 'Docker'],
-    github: 'https://github.com/Antonio2772',
+    stack: ['Java', 'Spring'],
+    github: 'https://github.com/ogsan-zo',
     live: '#',
   },
 ]
