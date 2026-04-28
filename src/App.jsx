@@ -1,4 +1,5 @@
 import { BrowserRouter } from 'react-router-dom'
+import { LanguageProvider } from './i18n'
 import Navbar             from './components/Navbar'
 import Sidebar            from './components/Sidebar'
 import ParticleBackground from './components/ParticleBackground'
@@ -11,6 +12,7 @@ import Stack              from './pages/Stack'
 
 export default function App() {
   return (
+    <LanguageProvider>
     <BrowserRouter>
       <div className="bg-[#0a0a0a] min-h-screen">
         <ParticleBackground />
@@ -26,5 +28,6 @@ export default function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </LanguageProvider>
   )
 }

@@ -5,6 +5,7 @@ export default function Section({
   label,
   children,
   noBorder       = false,
+  autoHeight     = false,
   className      = '',
   innerClassName = '',
   padding        = 'py-14 md:py-20 px-4 sm:px-6',
@@ -16,7 +17,8 @@ export default function Section({
     <div
       ref={ref}
       className={[
-        'relative min-h-screen flex flex-col justify-center',
+        'relative flex flex-col',
+        !autoHeight && 'min-h-screen justify-center',
         padding,
         !noBorder && 'border-t border-[#1a1a1a]',
         className,
@@ -28,7 +30,7 @@ export default function Section({
             initial={{ opacity: 0, y: 12 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="font-mono text-sm sm:text-base tracking-[0.35em] uppercase text-[#4ade80] mb-10 w-full text-center"
+            className="font-mono text-3xl sm:text-4xl font-bold tracking-[0.12em] uppercase text-[#4ade80] mb-10 w-full text-center"
           >
             // {label}
           </motion.p>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Section from '../components/Section'
 import { TECH_ICONS, PROJECTS } from '../data'
+import { useT } from '../i18n'
 
 function TechTag({ name }) {
   const tech = TECH_ICONS[name]
@@ -14,26 +15,26 @@ function TechTag({ name }) {
   )
 }
 
-function ProjectCard({ project, inView, delay, isLeft }) {
+function ProjectCard({ project, inView, delay, isLeft, lang }) {
   return (
     <motion.article
       initial={{ opacity: 0, x: isLeft ? -28 : 28 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
-      className="group bg-[#0a0a0a] border border-[#1e1e1e] p-6 hover:border-[#4ade80]/25 transition-colors duration-300"
+      className="group bg-[#0d0d0d] border border-[#1e1e1e] rounded-lg p-6 hover:border-[#4ade80]/25 transition-colors duration-300"
     >
       <div className="flex items-baseline gap-2 mb-0.5">
         <h3 className="font-sans font-bold text-white text-lg group-hover:text-[#4ade80] transition-colors duration-300">
           {project.name}
         </h3>
-        <span className="font-mono text-[#4ade80] text-xs">· {project.type}</span>
+        <span className="font-mono text-[#4ade80] text-xs">· {project.type[lang]}</span>
       </div>
       <p className="font-mono text-[9px] tracking-[0.2em] text-[#555] uppercase mb-4">
         {project.period}
       </p>
 
       <ul className="flex flex-col gap-2 mb-5">
-        {project.description.map((line, i) => (
+        {project.description[lang].map((line, i) => (
           <li key={i} className="flex gap-2.5 text-sm text-[#999] leading-relaxed">
             <span className="text-[#4ade80] shrink-0 mt-0.5 select-none">·</span>
             {line}
@@ -72,8 +73,9 @@ function ProjectCard({ project, inView, delay, isLeft }) {
 }
 
 export default function Projects() {
+  const { lang, t } = useT()
   return (
-    <Section label="projets">
+    <Section label={t.sections.projects} autoHeight>
       {(inView) => (
         <div className="relative w-full max-w-3xl">
 
@@ -102,6 +104,7 @@ export default function Projects() {
                       inView={inView}
                       delay={0.25 + i * 0.2}
                       isLeft={isLeft}
+                      lang={lang}
                     />
                   </div>
 

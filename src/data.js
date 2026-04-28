@@ -9,11 +9,18 @@ import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 
-export const PHRASES = [
-  'je construis des apps qui tiennent la route.',
-  'du backend au frontend, sans compromis.',
-  'code propre. architecture solide. résultats nets.',
-]
+export const PHRASES = {
+  fr: [
+    'je construis des apps qui tiennent la route.',
+    'du backend au frontend, sans compromis.',
+    'code propre. architecture solide. résultats nets.',
+  ],
+  en: [
+    'I build apps that hold up under pressure.',
+    'from backend to frontend, no compromises.',
+    'clean code. solid architecture. sharp results.',
+  ],
+}
 
 // ─── Shared social links (Hero + Contact) ────────────────────────────────────
 
@@ -80,12 +87,18 @@ export const PROJECTS = [
   {
     num: '01',
     name: 'Inscriptions ESPA',
-    type: 'Stage',
-    period: 'Déc 2025 → Mars 2026',
-    description: [
-      "Système d'information complet pour la gestion des inscriptions étudiantes — back-end Symfony, front-end Next.js.",
-      "Automatisation de la génération de documents officiels (attestations, relevés de notes), réduisant à zéro les saisies manuelles.",
-    ],
+    type: { fr: 'Stage', en: 'Internship' },
+    period: 'Déc 2025 → Mar 2026',
+    description: {
+      fr: [
+        "Système d'information complet pour la gestion des inscriptions étudiantes — back-end Symfony, front-end Next.js.",
+        "Automatisation de la génération de documents officiels (attestations, relevés de notes), réduisant à zéro les saisies manuelles.",
+      ],
+      en: [
+        "Complete information system for managing student enrollments — Symfony back-end, Next.js front-end.",
+        "Automated generation of official documents (certificates, transcripts), reducing manual data entry to zero.",
+      ],
+    },
     stack: ['Symfony', 'Next.js', 'PostgreSQL'],
     github: 'https://github.com/ogsan-zo',
     live: '#',
@@ -93,12 +106,18 @@ export const PROJECTS = [
   {
     num: '02',
     name: 'Rapports MESUPRES',
-    type: 'Institutionnel',
+    type: { fr: 'Institutionnel', en: 'Institutional' },
     period: 'Oct → Déc 2025',
-    description: [
-      "Plateforme centralisée remplaçant les échanges manuels de rapports au niveau du Ministère de l'Enseignement Supérieur.",
-      "Centralisation de 3 types de rapports (hebdomadaires, mensuels, semestriels) avec tableau de bord de suivi par agent.",
-    ],
+    description: {
+      fr: [
+        "Plateforme centralisée remplaçant les échanges manuels de rapports au niveau du Ministère de l'Enseignement Supérieur.",
+        "Centralisation de 3 types de rapports (hebdomadaires, mensuels, semestriels) avec tableau de bord de suivi par agent.",
+      ],
+      en: [
+        "Centralized platform replacing manual report exchanges at the Ministry of Higher Education.",
+        "Consolidation of 3 report types (weekly, monthly, semi-annual) with a per-agent tracking dashboard.",
+      ],
+    },
     stack: ['Symfony', 'Next.js', 'PostgreSQL'],
     github: 'https://github.com/ogsan-zo',
     live: '#',
@@ -106,12 +125,18 @@ export const PROJECTS = [
   {
     num: '03',
     name: 'Mini-Framework MVC',
-    type: 'Dev Tool',
+    type: { fr: 'Dev Tool', en: 'Dev Tool' },
     period: '2024 – 2025',
-    description: [
-      "Framework MVC from scratch en Java, inspiré de Spring MVC — routeur dynamique avec mapping automatique des URLs.",
-      "Système de sécurité d'accès basé sur des rôles et permissions, avec documentation complète de l'architecture.",
-    ],
+    description: {
+      fr: [
+        "Framework MVC from scratch en Java, inspiré de Spring MVC — routeur dynamique avec mapping automatique des URLs.",
+        "Système de sécurité d'accès basé sur des rôles et permissions, avec documentation complète de l'architecture.",
+      ],
+      en: [
+        "MVC framework built from scratch in Java, inspired by Spring MVC — dynamic router with automatic URL mapping.",
+        "Role and permission-based access security system, with comprehensive architecture documentation.",
+      ],
+    },
     stack: ['Java', 'Spring'],
     github: 'https://github.com/ogsan-zo',
     live: '#',

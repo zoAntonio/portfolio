@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Section from '../components/Section'
 import { CATEGORIES, STACKS } from '../data'
+import { useT } from '../i18n'
 
 function TechCard({ tech, delay, inView }) {
   return (
@@ -25,25 +26,13 @@ function TechCard({ tech, delay, inView }) {
 
 export default function Stack() {
   const [active, setActive] = useState('frontend')
+  const { t } = useT()
   const activeLabel = CATEGORIES.find(c => c.id === active)?.label ?? active
 
   return (
-    <Section label="stack">
+    <Section label={t.sections.stack}>
       {(inView) => (
         <div className="w-full max-w-5xl flex flex-col gap-10">
-
-          {/* Section heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.05 }}
-            className="text-center"
-          >
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#e2e2e2] mb-2">
-              Discover My <span className="text-[#4ade80]">Stacks</span>
-            </h2>
-            <p className="font-mono text-sm text-[#555]">The tools that shape what I build.</p>
-          </motion.div>
 
           {/* Tabs + grid */}
           <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 md:gap-12">

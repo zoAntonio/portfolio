@@ -1,22 +1,23 @@
 import { motion } from 'framer-motion'
 import Section from '../components/Section'
 import heroImg from '../assets/hero.png'
-import { META } from '../data'
+import { useT } from '../i18n'
 
 export default function About() {
+  const { t } = useT()
   return (
-    <Section label="à propos">
+    <Section label={t.sections.about}>
       {(inView) => (
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+        <div className="w-full grid grid-cols-1 md:grid-cols-[280px_1fr] gap-10 md:gap-16 items-start">
 
           {/* Left — image */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.65, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full"
+            className="w-full max-w-[220px] mx-auto md:max-w-none"
           >
-            <div className="relative w-full aspect-[4/3] md:aspect-[4/5] overflow-hidden border border-[#1a1a1a]">
+            <div className="relative w-full aspect-[3/4] overflow-hidden border border-[#1a1a1a]">
               <img
                 src={heroImg}
                 alt="Zo"
@@ -39,26 +40,19 @@ export default function About() {
               className="font-sans font-semibold text-white leading-snug"
               style={{ fontSize: 'clamp(1.4rem, 4.5vw, 2.4rem)' }}
             >
-              Développeur animé par une volonté constante{' '}
-              <span className="text-[#4ade80]">de progresser.</span>
+              {t.about.title}{' '}
+              <span className="text-[#4ade80]">{t.about.title_hl}</span>
             </h2>
 
             {/* Bio */}
             <div className="flex flex-col gap-3">
-              <p className="text-[#999] leading-relaxed text-sm sm:text-[0.95rem]">
-                Diplômé d'une Licence en Informatique à IT University, j'ai acquis une
-                expérience concrète en développement Full-Stack lors de stages au sein
-                d'institutions publiques — ESPA et MESUPRES — avec Symfony, Next.js et PostgreSQL.
-              </p>
-              <p className="text-[#999] leading-relaxed text-sm sm:text-[0.95rem]">
-                Humble, curieux et rigoureux, je recherche un environnement ambitieux
-                où contribuer à des projets à fort impact et évoluer dans ma carrière.
-              </p>
+              <p className="text-[#999] leading-relaxed text-sm sm:text-[0.95rem]">{t.about.bio1}</p>
+              <p className="text-[#999] leading-relaxed text-sm sm:text-[0.95rem]">{t.about.bio2}</p>
             </div>
 
             {/* Metadata grid */}
             <div className="grid grid-cols-2 gap-px bg-[#1a1a1a] border border-[#1a1a1a]">
-              {META.map(({ label, value }) => (
+              {t.about.meta.map(({ label, value }) => (
                 <div key={label} className="bg-[#0a0a0a] px-4 py-3">
                   <p className="font-mono text-[9px] tracking-[0.2em] text-[#555] uppercase mb-1">
                     {label}

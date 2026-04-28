@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Section from '../components/Section'
 import { PHRASES, SOCIALS } from '../data'
+import { useT } from '../i18n'
 
 function useTyping(phrases) {
   const [idx,    setIdx]    = useState(0)
@@ -34,8 +35,9 @@ function useTyping(phrases) {
 }
 
 export default function Hero() {
-  const typed    = useTyping(PHRASES)
-  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  const { lang, t } = useT()
+  const typed       = useTyping(PHRASES[lang])
+  const scrollTo    = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
     <Section
@@ -94,13 +96,13 @@ export default function Hero() {
           onClick={() => scrollTo('projects')}
           className="px-7 py-3 bg-[#4ade80] text-[#0a0a0a] font-mono text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#22c55e] transition-colors duration-200 focus:outline-none"
         >
-          voir_projets
+          {t.hero.cta1}
         </button>
         <button
           onClick={() => scrollTo('contact')}
           className="px-7 py-3 border border-[#222] text-[#444] font-mono text-xs tracking-[0.15em] uppercase hover:border-[#4ade80] hover:text-[#4ade80] transition-all duration-200 focus:outline-none"
         >
-          me_contacter
+          {t.hero.cta2}
         </button>
       </motion.div>
 
