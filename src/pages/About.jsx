@@ -15,7 +15,7 @@ export default function About() {
             initial={{ opacity: 0, x: -24 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.65, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full max-w-[220px] mx-auto md:max-w-none"
+            className="hidden md:block w-full md:max-w-none"
           >
             <div className="relative w-full aspect-[3/4] overflow-hidden border border-[#1a1a1a]">
               <img

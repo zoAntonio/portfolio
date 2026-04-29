@@ -57,7 +57,7 @@ export default function Contact() {
               zoheriniaina.antonio@gmail.com
             </span>
             <span className="font-mono text-sm text-[#777]">
-              Antananarivo, Madagascar
+              034 60 14 447 , Antananarivo , Madagascar
             </span>
           </motion.div>
 
