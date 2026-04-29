@@ -102,7 +102,7 @@ export const PROJECTS = [
       ],
     },
     stack: ['Symfony', 'Next.js', 'PostgreSQL'],
-    github: 'https://github.com/ogsan-zo',
+    github: 'https://github.com/ogsan-zo/inscription-frontend',
     live: '#',
   },
   {
@@ -121,7 +121,7 @@ export const PROJECTS = [
       ],
     },
     stack: ['Symfony', 'Next.js', 'PostgreSQL'],
-    github: 'https://github.com/ogsan-zo',
+    github: 'https://github.com/ogsan-zo/rapports-backend',
     live: '#',
   },
   {
@@ -140,7 +140,7 @@ export const PROJECTS = [
       ],
     },
     stack: ['Java', 'Spring'],
-    github: 'https://github.com/ogsan-zo',
+    github: 'https://github.com/ogsan-zo/framework',
     live: '#',
   },
 ]
