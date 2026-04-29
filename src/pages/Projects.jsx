@@ -48,15 +48,18 @@ function ProjectCard({ project, inView, delay, isLeft, lang, t }) {
         ))}
       </div>
 
-      <div className="flex gap-5">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-mono text-[11px] text-[#666] hover:text-[#4ade80] transition-colors duration-200 flex items-center gap-1.5"
-        >
-          <span>→</span> GitHub
-        </a>
+      <div className="flex flex-wrap gap-5">
+        {project.repos.map((repo) => (
+          <a
+            key={repo.label}
+            href={repo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[11px] text-[#666] hover:text-[#4ade80] transition-colors duration-200 flex items-center gap-1.5"
+          >
+            <span>→</span> {repo.label}
+          </a>
+        ))}
         {project.live !== '#' && (
           <a
             href={project.live}
