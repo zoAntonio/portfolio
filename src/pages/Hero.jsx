@@ -105,7 +105,7 @@ export default function Hero() {
           {t.hero.cta2}
         </button>
         <a
-          href="/CV_Zo.pdf"
+          href="/Cv-Zo.pdf"
           download
           className="px-7 py-3 border border-[#222] text-[#444] font-mono text-xs tracking-[0.15em] uppercase hover:border-[#4ade80] hover:text-[#4ade80] transition-all duration-200 focus:outline-none"
         >
